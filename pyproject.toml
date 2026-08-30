@@ -1,0 +1,75 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "convMMD"
+version = "0.2.0"
+description = "Research-preview convMMD tools for deconvolution, denoising, and measurement error"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+license-files = ["LICENSE", "THIRD_PARTY_NOTICES.md"]
+authors = [
+    { name = "Ritwik Vashistha", email = "ritwik.v@utexas.edu" },
+]
+maintainers = [
+    { name = "Ritwik Vashistha", email = "ritwik.v@utexas.edu" },
+]
+keywords = [
+    "deconvolution",
+    "denoising",
+    "density estimation",
+    "maximum mean discrepancy",
+    "measurement error",
+    "normalizing flows",
+    "pytorch",
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Scientific/Engineering :: Mathematics",
+]
+dependencies = [
+    "torch>=2.13",
+    "numpy>=1.20",
+    "scipy>=1.7",
+    "nflows==0.14",
+    "tqdm>=4.60",
+    "scikit-learn>=1.5",
+]
+
+[project.optional-dependencies]
+examples = [
+    "matplotlib>=3.5",
+]
+notebooks = [
+    "matplotlib>=3.5",
+    "jupyter",
+]
+metrics = [
+    "POT",
+]
+dev = [
+    "pytest>=7.0",
+    "build>=1.2",
+    "twine>=5.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/ritwikvashistha/convMMD"
+Repository = "https://github.com/ritwikvashistha/convMMD"
+Issues = "https://github.com/ritwikvashistha/convMMD/issues"
+Changelog = "https://github.com/ritwikvashistha/convMMD/blob/main/CHANGELOG.md"
+Paper = "https://arxiv.org/abs/2606.21907"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["convMMD*"]

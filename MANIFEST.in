@@ -1,0 +1,17 @@
+include README.md
+include CHANGELOG.md
+include CITATION.cff
+include CODE_OF_CONDUCT.md
+include CONTRIBUTING.md
+include LICENSE
+include SECURITY.md
+include THIRD_PARTY_NOTICES.md
+include RELEASING.md
+include RELEASE_VALIDATION.md
+include requirements.txt
+include docs/METHOD.md
+recursive-include examples *
+recursive-include tests *.py
+global-exclude .DS_Store
+global-exclude *.py[cod]
+global-exclude __pycache__

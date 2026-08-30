@@ -1,0 +1,41 @@
+name: Scientific or API proposal
+description: Propose a focused scientific-method, API, or documentation change.
+title: "[Proposal]: "
+labels:
+  - enhancement
+body:
+  - type: textarea
+    id: scope
+    attributes:
+      label: Proposed change
+      description: Describe the smallest change and why it belongs in convMMD.
+    validations:
+      required: true
+  - type: textarea
+    id: model
+    attributes:
+      label: Statistical setting
+      description: State the observation model, assumptions, and fitting objective when applicable.
+    validations:
+      required: true
+  - type: textarea
+    id: api
+    attributes:
+      label: Public API impact
+      description: Identify any public function, result, checkpoint, or documented behavior that would change.
+    validations:
+      required: true
+  - type: textarea
+    id: validation
+    attributes:
+      label: Validation plan
+      description: Explain the focused tests and scientific sanity check that would support the change.
+    validations:
+      required: true
+  - type: checkboxes
+    id: scope-check
+    attributes:
+      label: Scope confirmation
+      options:
+        - label: This proposal does not include private data, large results, checkpoints, or a full paper-reproduction study.
+          required: true

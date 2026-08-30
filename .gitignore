@@ -1,0 +1,28 @@
+# Operating-system files
+.DS_Store
+Thumbs.db
+
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+
+# Packaging output
+build/
+dist/
+*.egg-info/
+
+# Virtual environments
+.venv/
+.venv-release/
+venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/

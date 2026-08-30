@@ -1,0 +1,35 @@
+cff-version: 1.2.0
+message: >-
+  If you use convMMD, please cite this software release and the associated
+  paper.
+title: convMMD
+type: software
+version: 0.2.0
+license: MIT
+repository-code: https://github.com/ritwikvashistha/convMMD
+url: https://github.com/ritwikvashistha/convMMD
+authors:
+  - family-names: Vashistha
+    given-names: Ritwik
+    email: ritwik.v@utexas.edu
+keywords:
+  - deconvolution
+  - denoising
+  - density estimation
+  - maximum mean discrepancy
+  - measurement error
+  - normalizing flows
+  - PyTorch
+preferred-citation:
+  type: article
+  title: Nonparametric Deconvolution and Denoising using Simulation Based Inference
+  authors:
+    - family-names: Vashistha
+      given-names: Ritwik
+    - family-names: Sarkar
+      given-names: Abhra
+    - family-names: Farahi
+      given-names: Arya
+  year: 2026
+  doi: 10.48550/arXiv.2606.21907
+  url: https://arxiv.org/abs/2606.21907

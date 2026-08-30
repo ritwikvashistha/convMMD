@@ -1,0 +1,6 @@
+torch>=2.13
+numpy>=1.20
+scipy>=1.7
+nflows==0.14
+tqdm>=4.60
+scikit-learn>=1.5
