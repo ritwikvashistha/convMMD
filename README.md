@@ -40,6 +40,19 @@ such as Gaussian mixtures and normalizing flows. This v0.2.0 package implements
 normalizing-flow latent models only: neural spline flows and inverse
 autoregressive flows. It does not provide a packaged GMM latent model.
 
+## Visual overview
+
+![Two fixed-seed synthetic convMMD examples: one-dimensional deconvolution and
+scalar measurement-error regression](docs/assets/convmmd-overview.png)
+
+The panels show a fixed-bandwidth KDE of samples from a fitted deconvolution
+flow and the supported scalar linear measurement-error correction. These are
+single fixed-seed synthetic illustrations, not benchmark claims. Fitting
+receives only noisy observations and known error scales; latent truth is used
+afterward for evaluation and plotting. Package-backed workflows for these
+capabilities and posterior-mean denoising are in the
+[canonical notebooks](examples/notebooks/).
+
 ## Installation
 
 Python 3.10 or newer is required. Release CI is configured to test CPython

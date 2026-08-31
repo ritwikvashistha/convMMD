@@ -1,6 +1,6 @@
 # Release validation: convMMD 0.2.0
 
-Validation date: 2026-08-30
+Validation date: 2026-08-31
 
 This report records the checks performed for the allowlisted clean v0.2.0
 public snapshot. It is not a performance benchmark and does not authorize a
@@ -11,8 +11,9 @@ commit, push, tag, visibility change, GitHub release, or package upload.
 The candidate was assembled from an explicit public allowlist rather than by
 copying the private development worktree. It contains package source, supported
 tests, three scripts, three canonical notebooks, public documentation and
-metadata, and read-only GitHub configuration. It contains no private Git
-history or release-coordination records.
+metadata, one package-generated README overview image, and read-only GitHub
+configuration. It contains no private Git history or release-coordination
+records.
 
 Snapshot inspection found no symlinks, executable files, files over 1 MiB,
 credentials, personal filesystem paths, server references, `.DS_Store`, Python
@@ -38,6 +39,15 @@ The complete supported suite passed on macOS arm64 with Python 3.13.2, PyTorch
   passed.
 - The resolved runtime requirements reported no known vulnerabilities.
 
+The fixed-seed README overview was generated through the public package APIs.
+Fitting received only noisy observations and known error scales; simulation
+truth entered afterward for plotting and evaluation. The deconvolution fit
+uses four spline bins and a visualization-only flow-sample KDE bandwidth of
+`0.09`. The illustration reported a KDE ISE of `0.0045` and naive/convMMD
+regression slopes of `1.4608`/`1.9561` against truth `2.0`. These values are
+visual sanity checks, not benchmark claims. The committed PNG is 1,647 by 690
+pixels, decodes successfully, and is under 1 MiB.
+
 ## Distribution validation
 
 `convmmd-0.2.0-py3-none-any.whl` and `convmmd-0.2.0.tar.gz` were built with
@@ -49,8 +59,9 @@ Python 3.10.11 using current isolated build tooling.
 - The wheel contains only the `convMMD` package, distribution metadata, MIT
   license, and nflows notice. Its package source matches the clean snapshot.
 - The source distribution additionally contains the approved public
-  documentation, three clean canonical notebooks, examples, and supported
-  tests. Its package source also matches the clean snapshot.
+  documentation, README overview image, three clean canonical notebooks,
+  examples, and supported tests. Its package source also matches the clean
+  snapshot.
 - Archive inspection found no private coordination records, `.DS_Store`,
   caches, checkpoints, logs, experiment results, or notebook outputs.
 
@@ -76,7 +87,7 @@ environment that did not inherit system site packages. It resolved PyTorch
 - Small installed-package runs completed for deconvolution, default-importance
   posterior-mean denoising, and scalar measurement-error regression. They
   checked finite results, expected shapes, and the public default. The fixed
-  installed regression run improved a naive slope of `1.455442` to `1.995843`
+  installed regression run improved a naive slope of `1.460834` to `1.956119`
   against truth `2.0`.
 
 ## Frozen denoising reference
@@ -109,7 +120,7 @@ an optional ULA comparison and does not change that default.
 - MMD forms pairwise kernel matrices and has quadratic batch cost.
 - Broad API, checkpoint, and platform compatibility are not promised beyond the
   documented v0.1.0 NSF state-dictionary migration path.
-- Local release validation covers macOS arm64 with Python 3.10 and 3.13. The
-  configured Ubuntu CPython 3.10--3.14 matrix remains a private remote-CI gate
-  before public visibility.
+- Local release validation covers macOS arm64 with Python 3.10 and 3.13.
+  GitHub Actions separately validates Ubuntu CPython 3.10--3.14 on the exact
+  release commit before the GitHub release is created.
 - No remote GPU run was needed for this release validation.

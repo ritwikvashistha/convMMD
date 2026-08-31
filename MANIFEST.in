@@ -10,6 +10,7 @@ include RELEASING.md
 include RELEASE_VALIDATION.md
 include requirements.txt
 include docs/METHOD.md
+recursive-include docs/assets *.png
 recursive-include examples *
 recursive-include tests *.py
 global-exclude .DS_Store

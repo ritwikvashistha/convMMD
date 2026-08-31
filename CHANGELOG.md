@@ -4,7 +4,7 @@ This file records user-visible changes to the public research-preview package.
 The project follows semantic versioning where practical, but APIs and
 checkpoints may change between minor releases while the version is below 1.0.
 
-## [0.2.0] - Unreleased
+## [0.2.0] - 2026-08-30
 
 ### Added
 
@@ -16,6 +16,8 @@ checkpoints may change between minor releases while the version is below 1.0.
 - Versioned model-only checkpoints for `NormalizingFlowDensity`.
 - Package-backed simulation notebooks for deconvolution, denoising, and
   measurement-error regression.
+- A package-generated visual overview of deconvolution and measurement-error
+  regression results in the README.
 - Focused regression, denoising, bounded-spline, checkpoint, and notebook
   tests.
 
